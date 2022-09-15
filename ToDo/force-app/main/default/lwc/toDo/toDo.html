@@ -1,0 +1,41 @@
+<template>
+    <div>
+    <lightning-card  title="Todo list" style="width: 100%;">
+        <lightning-layout>
+            <lightning-layout-item padding="around-small" size="12">
+                <ul class="slds-has-dividers_around-space">
+
+                    <template for:each={todoList} for:item="todoTask">
+                        <li class="slds-item"  key={todoTask.id}>
+                            <lightning-layout  horizontal-align="spread">
+                                <lightning-layout-item padding="horizontal-small" flexibility="auto">
+                                    {todoTask.name}
+                                </lightning-layout-item>
+                                <lightning-layout-item padding="horizontal-small"  >
+                                        <lightning-button-icon icon-name="utility:delete" onclick={deleteItem} name={todoTask.id} alternative-text="Detete"  title="Delete"></lightning-button-icon>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </li>
+                    </template>
+                    
+                </ul>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <ul class="slds-has-dividers_around-space">
+            <li class="slds-item">
+                <lightning-layout >
+                    <lightning-layout-item padding="horizontal-small" flexibility="auto">
+                        <lightning-input type="text" onchange={addtask}  placeholder="Enter Task" value={newTask}  variant="label-hidden" label="New Task" required></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <lightning-button variant="brand" label="Add" onclick={addToList}></lightning-button>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </li>
+        </ul>
+           
+    </lightning-card>
+    </div>
+</template>
+ 

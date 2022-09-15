@@ -1,0 +1,50 @@
+<template>
+    <div class="row" style="margin: top 1px;">
+        <div class="column-left" style="background-color:rgb(255, 255, 255); border:1px solid black;">
+            <div style="position: absolute;" >
+                <fieldset class="slds-form-element slds-form-element_compound slds-form-element_address">
+                    <legend class="slds-form-element__legend slds-form-element__label">Rent a Car</legend>
+                    <div class="slds-form-element__control" style="padding-top: 5px;">
+                        <div class="slds-form-element__row">
+                            <div class="slds-size_6-of-6">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="form-element-id-02">Owner Name</label>
+                                    <div class="slds-form-element__control">
+                                        <input type="text" name="owner" value={owner} onchange={handleOwnerChange}  required="" class="slds-input" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                            <div class="slds-size_6-of-6">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="form-element-id-04">Rent per day</label>
+                                    <div class="slds-form-element__control">
+                                        <input type="text" name="rent"  value={rent} onchange={handleRentChange} required="" class="slds-input" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                            <div class="slds-size_6-of-6">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="form-element-id-05">Car Model</label>
+                                    <div class="slds-form-element__control">
+                                        <input type="text" name="carModel"  value={carModel} onchange={handleModelChange} required="" class="slds-input"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="slds-button slds-button_brand" onclick={saveCar}>Submit</button>
+                </fieldset>
+            </div>
+        </div>
+        <div class="column-right" style="background-color:rgb(255, 255, 255);  border:1px solid black;">
+          <c-car-rent-list car-list={carDisplayList}></c-car-rent-list>
+        </div>
+      </div>
+    <br/>
+    
+</template>

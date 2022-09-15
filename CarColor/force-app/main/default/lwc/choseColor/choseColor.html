@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Color picker" icon-name="standard:account">
+        <img src={selectdImage} alt="Image" width="500px"/>
+        <p slot="footer">
+            <span>
+                <button onclick={showRed} style="background-color: #f44336; margin:15px;">Red</button>
+                <button onclick={showGreen} style="background-color: #4CAF50; margin:15px;">Green</button>
+                <button onclick={showBlue} style="background-color: #008CBA; margin:15px;">Blue</button>
+                <button onclick={showWhite} style="background-color: #e7e7e7; margin:15px;">White</button>
+            </span>
+        </p>
+    </lightning-card>
+</template>

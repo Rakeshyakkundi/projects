@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-scrollable_y">
+        <div class="slds-text-longform">
+            <template for:each={carList} for:item="rentCar">
+                <div key={rentCar.Id} class="slds-m-bottom_small">
+                    <lightning-card title={rentCar.CarModel__c} icon-name="custom:custom31">
+                            <div class="slds-p-horizontal_medium">
+                                <p>Rent per day: {rentCar.RentAmount__c}</p>
+                                <p>Car Owner: {rentCar.Name}</p>
+                            </div>
+                            <lightning-button-icon icon-name="utility:delete" onclick={deleteItem} class="button" name={rentCar.Id} alternative-text="Detete"  title="Delete"></lightning-button-icon>
+                    </lightning-card>   
+                </div>
+            </template>
+        </div>
+      </div>
+</template>

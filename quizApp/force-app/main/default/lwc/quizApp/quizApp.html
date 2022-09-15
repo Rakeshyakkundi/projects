@@ -1,0 +1,37 @@
+<template>
+    <div class="div-align">
+        <lightning-card title="Quiz App">
+            <div class="slds-m-around_medium">
+                <form>
+                    <template for:each={questions} for:item="quiz">
+                        <div key={quiz.id} class="slds-m-bottom_medium">
+                        <div><strong>{quiz.id}  {quiz.ques}</strong></div>
+                            <div class="slds-grid slds-grid_vertical slds-m-bottom_x-small">
+                                <div class="slds-col" style="margin-right: 0">
+                                    <input type="radio"  name={quiz.id} value="a" onchange={answerHandle}  />
+                                    {quiz.answers.a}
+                                </div>
+                                <div class="slds-col">
+                                    <input type="radio" name={quiz.id} value="b" onchange={answerHandle}  />
+                                    {quiz.answers.b}
+                                </div>
+                                <div class="slds-col">
+                                    <input type="radio" name={quiz.id} value="c" onchange={answerHandle}  />
+                                    {quiz.answers.c}
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <lightning-button disabled={selectedAll} variant="brand" label="Submit" class="slds-m-around_small" title="Submit" onclick={submitHandle}  >
+                    </lightning-button>
+                    <lightning-button variant="brand" label="Reset" class="slds-m-around_small" title="Reset" onclick={resetHandle}  >
+                    </lightning-button>
+                </form>
+                <hr/>
+                <template if:true={showScore}>
+                    <div>Your have Scored {correctAnswers}. No of Questions {questions.length}</div>
+                </template>
+            </div>
+        </lightning-card>
+    </div>
+</template>

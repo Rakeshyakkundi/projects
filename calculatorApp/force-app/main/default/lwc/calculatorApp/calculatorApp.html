@@ -1,0 +1,13 @@
+<template>
+    <div >
+        <lightning-input label="Number 1" name="num1" onchange={handleChangeNum1} class="input-disp"></lightning-input>
+        <lightning-input label="Number 2" name="num2"  onchange={handleChangeNum2} class="input-disp"></lightning-input>
+        <br>
+        <lightning-button label="Add" onclick={addition} class="my-button"></lightning-button>
+        <lightning-button label="Sub" onclick={subtraction} class="my-button"></lightning-button>
+        <lightning-button label="Multi" onclick={multiplication} class="my-button"></lightning-button>
+        <lightning-button label="Div" onclick={division} class="my-button"></lightning-button>
+        <h5 style="margin-top:20px ;">Result : {result}</h5>
+    </div>
+    
+  </template>

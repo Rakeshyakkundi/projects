@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column-left {
+    float: left;
+    width: 18%;
+    padding: 10px;
+    height: 300px;
+  }
+  
+  .column-right {
+    float: right;
+    width: 80%;
+    padding: 10px;
+    height: 450px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.button {
+    line-height: 12px;
+    width: 18px;
+    font-size: 8pt;
+    font-family: tahoma;
+    margin-top: 10px;
+    margin-right: 10px;
+    position:absolute;
+    top:0;
+    right:0;
+}

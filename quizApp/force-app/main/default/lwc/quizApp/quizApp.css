@@ -1,0 +1,10 @@
+.div-align{
+    border: 1px solid black; 
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
