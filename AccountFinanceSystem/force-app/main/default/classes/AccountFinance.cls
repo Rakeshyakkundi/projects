@@ -16,7 +16,8 @@ public class AccountFinance {
                		mapTarget.put(accountTarget[j].Date__c.month(),valuesTarget+accountTarget[j].Amount__c);
                 }else{
                     mapTarget.put(accountTarget[j].Date__c.month(),accountTarget[j].Amount__c);
-                } 
+                }
+                
             }catch(Exception e){
                		System.debug('Error'+e.getMessage());
             }
